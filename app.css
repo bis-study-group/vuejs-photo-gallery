@@ -1,1 +1,18 @@
 /* Insert code here... */
+.container {
+    width: 1024px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gallery {
+    padding-bottom: 200px;
+}
+
+.main-image {
+    display: block;
+}
+
+.thumbnails {
+    display: inline-block;
+}
