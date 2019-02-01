@@ -5,8 +5,8 @@ Vue.component('gallery', {
       <div class="main-image" v-for="item in items">
         <img :src="'/images/' + item.main" v-show="currentTab === items.indexOf(item)">
       </div>
-      <div class="thumbnails" v-for="item in items" @click="currentTab = items.indexOf(item)">
-        <img :src="'/images/' + item.thumbnail">
+      <div class="thumbnails" v-for="item in items">
+        <img :src="'/images/' + item.thumbnail" @click="currentTab = items.indexOf(item)">
       </div>
     </div>
   `,
