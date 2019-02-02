@@ -2,10 +2,32 @@ Vue.component('gallery', {
   template: `
     <div class="gallery">
       <h2 class="gallery-title">{{ title }}</h2>
-      <!-- Insert code here... -->
+      <div class="gallery__container">
+        <div class="gallery__main">
+          <img class="gallery__image" :src="'images/' + currentImage">
+        </div>
+        <div class="gallery__thumbnails thumbnails">
+          <div class="thumbnails__image" @click="changeImage(index)" v-for="(item, index) in items">
+            <img class="gallery__image" :src="'images/' + item.thumbnail">
+          </div>
+        </div>
+      </div>
     </div>
   `,
-  /* Insert code here... */
+  props: ['title', 'items'],
+  data() {
+    return {
+      currentImage: null
+    }
+  },
+  mounted() {
+    this.currentImage = this.items[0].main
+  },
+  methods: {
+    changeImage(index) {
+      this.currentImage = this.items[index].main
+    }
+  }
 });
 
 new Vue({

@@ -1,1 +1,12 @@
-/* Insert code here... */
+.gallery {
+  width: 100%;
+  max-width: 800px; }
+  .gallery__image {
+    width: 100%; }
+  .gallery__thumbnails {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }

@@ -1,0 +1,16 @@
+@charset 'UTF-8';
+
+.gallery {
+  width: 100%;
+  max-width: 800px;
+
+  &__image {
+    width: 100%;
+  }
+
+  &__thumbnails {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
