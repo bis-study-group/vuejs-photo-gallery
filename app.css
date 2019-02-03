@@ -1,1 +1,16 @@
-/* Insert code here... */
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.photo1 img {
+  width: 100%;
+}
+.photo2 {
+  display: flex;
+  justify-content: space-between;
+  margin: calc((1024px * 0.1) / 2) 0;
+}
+.photo2 img {
+  width: 30%;
+  height: 180px;
+}
