@@ -2,10 +2,20 @@ Vue.component('gallery', {
   template: `
     <div class="gallery">
       <h2 class="gallery-title">{{ title }}</h2>
-      <!-- Insert code here... -->
+      <section>
+        <img v-for="(photo, index) in items" v-show="index == showPhoto" v-bind:src="/images/ + photo.main">
+      </section>
+      <section>
+        <img v-for="(photo, index) in items" class="choice" v-bind:src="/images/ + photo.thumbnail" v-bind:alt="photo.thumbnail" v-on:click="showPhoto = index">
+      </section>
     </div>
   `,
-  /* Insert code here... */
+  data: function() {
+      return {
+        showPhoto : 0
+      }
+  },  
+  props:['title','items']
 });
 
 new Vue({
