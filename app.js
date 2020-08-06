@@ -2,10 +2,23 @@ Vue.component('gallery', {
   template: `
     <div class="gallery">
       <h2 class="gallery-title">{{ title }}</h2>
-      <!-- Insert code here... -->
+      <div class="main-image" v-for="item in items">
+        <img :src="'/images/' + item.main" v-show="showImg === items.indexOf(item)">
+      </div>
+      <div class="thumbnails" v-for="item in items">
+        <img :src="'/images/' + item.thumbnail" @click="showImg = items.indexOf(item)">
+      </div>
     </div>
   `,
-  /* Insert code here... */
+  data: function () {
+    return {
+      showImg: 0
+    } 
+  },
+  props: {
+    title: String,
+    items: Array 
+  }
 });
 
 new Vue({
