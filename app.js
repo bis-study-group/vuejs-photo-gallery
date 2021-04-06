@@ -12,14 +12,20 @@ new Vue({
   el: '#app',
   data: {
     photos1: [
-      { main: 'image_1.jpeg', thumbnail: 'thumbnail_1.jpeg' },
-      { main: 'image_2.jpeg', thumbnail: 'thumbnail_2.jpeg' },
-      { main: 'image_3.jpeg', thumbnail: 'thumbnail_3.jpeg' }
+      { id: 1, main: 'image_1.jpeg', thumbnail: 'thumbnail_1.jpeg' },
+      { id: 2, main: 'image_2.jpeg', thumbnail: 'thumbnail_2.jpeg' },
+      { id: 3, main: 'image_3.jpeg', thumbnail: 'thumbnail_3.jpeg' }
     ],
     photos2: [
-      { main: 'image_4.jpeg', thumbnail: 'thumbnail_4.jpeg' },
-      { main: 'image_5.jpeg', thumbnail: 'thumbnail_5.jpeg' },
-      { main: 'image_6.jpeg', thumbnail: 'thumbnail_6.jpeg' }
-    ]
-  }
+      { id: 4, main: 'image_4.jpeg', thumbnail: 'thumbnail_4.jpeg' },
+      { id: 5, main: 'image_5.jpeg', thumbnail: 'thumbnail_5.jpeg' },
+      { id: 6, main: 'image_6.jpeg', thumbnail: 'thumbnail_6.jpeg' }
+    ],
+    url: 'images/image_1.jpeg'
+  },
+  methods: {
+    handleImage: function(event) {
+      this.url = event.target.src
+    }
+  },
 });

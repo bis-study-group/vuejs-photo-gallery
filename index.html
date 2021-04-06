@@ -12,7 +12,15 @@
     <div class="container">
       <h1 class="title">画像ギャラリーを作ろう</h1>
       <gallery :items="photos1" title="画像ギャラリーその1"></gallery>
-      <gallery :items="photos2" title="画像ギャラリーその2"></gallery>
+      <div class="wrapper">
+        <img  class="mainImage" v-bind:src="url">
+        <ul class="photoList">
+          <li class="photoList__item" v-for="item in photos1" v-bind:key="item.id">
+            <img :src="'images/' + item.main" v-on:click="handleImage">
+          </li>
+        </ul>
+      </div>
+      <!-- <gallery :items="photos2" title="画像ギャラリーその2"></gallery> -->
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
