@@ -1,5 +1,5 @@
 /* Insert code here... */
-.wrapper {
+.container {
   max-width: 800px;
   margin: 0 auto;
 }
@@ -9,7 +9,7 @@
   margin-bottom: 32px;
 }
 
-.photoList {
+.thumbnailList {
   margin: 0 auto;
   padding: 0;
   width: 100%;
@@ -18,11 +18,11 @@
   grid-gap: 32px;
 }
 
-.photoList__item {
+.thumbnailList-item {
   list-style: none;
   width: 100%;
 }
 
-.photoList__item img {
+.thumbnailList-item img {
   width: 100%;
 }
