@@ -23,7 +23,7 @@ Vue.component('gallery', {
   },
   methods: {
     updateUrl: function(event) {
-      this.url = event.target.src
+      this.url = event.target.getAttribute('src')
     }
   }
 });
