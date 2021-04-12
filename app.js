@@ -2,7 +2,6 @@ Vue.component('gallery', {
   template: `
     <div class="gallery">
       <h2 class="gallery-title">{{ title }}</h2>
-      <!-- Insert code here... -->
       <img  class="mainImage" :src="url">
       <ul class="thumbnailList">
         <li class="thumbnailList-item" v-for="item in items">
@@ -11,7 +10,6 @@ Vue.component('gallery', {
       </ul>
     </div>
   `,
-  /* Insert code here... */
   props: {
     title: String,
     items: Array
