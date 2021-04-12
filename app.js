@@ -4,7 +4,7 @@ Vue.component('gallery', {
       <h2 class="gallery-title">{{ title }}</h2>
       <img  class="mainImage" :src="url">
       <ul class="thumbnailList">
-        <li class="thumbnailList-item" v-for="item in items">
+        <li class="thumbnailList-item" v-for="item in items" :key="item.main">
           <img :src="'images/' + item.main" v-on:click="updateUrl">
         </li>
       </ul>
